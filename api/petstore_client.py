@@ -11,7 +11,7 @@ class PetstoreClient:
             "status": "available"
         }
         return requests.post(f"{self.BASE_URL}/pet", json=payload)
-
+    #
     def get_pet(self, pet_id):
         """READ - Hämtar ett husdjur baserat på ID"""
         return requests.get(f"{self.BASE_URL}/pet/{pet_id}")
