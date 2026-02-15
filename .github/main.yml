@@ -1,0 +1,14 @@
+name: Python Check
+on: [push] # Triggern
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Vilken dator roboten använder
+    steps:
+      - uses: actions/checkout@v4 # Kopierar din kod till roboten
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Run Tests
+        run: python mitt_script.py # Kör din kod
